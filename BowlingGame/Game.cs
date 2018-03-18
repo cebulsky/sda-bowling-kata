@@ -25,7 +25,13 @@ namespace BowlingGame
 
         public int TotalScores()
         {
-            return -1;
+            int result = 0;
+
+            foreach (var roll in _rolls)
+            {
+                result += roll.KnockedPinsCount;
+            }
+            return result;
         }
 
     }

@@ -21,9 +21,23 @@ namespace BowlingGame.Tests
         [Test]
         public void Should_GutterGame_ScoresZero()
         {
-            _game.Roll(0);
-            // Assert ?
+            for (int i = 0; i < 20; i++)
+            {
+                _game.Roll(0);
+            }
+
+            Assert.That(_game.TotalScores(), Is.EqualTo(0));
         }
 
+        [Test]
+        public void Should_AllOnes_ScoresTwenty()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                _game.Roll(1);
+            }
+
+            Assert.That(_game.TotalScores(), Is.EqualTo(20));
+        }
     }
 }
