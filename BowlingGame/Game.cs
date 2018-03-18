@@ -25,7 +25,7 @@ namespace BowlingGame
 
         public int TotalScores()
         {
-            return -1;
+            return 0;
         }
 
     }
